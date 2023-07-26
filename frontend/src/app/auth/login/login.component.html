@@ -1,0 +1,21 @@
+
+<div class="login">
+  <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required />
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" [disabled]="!loginForm.valid">
+      Login
+    </button>
+    <p>If You are not registe go to first</p>
+    <button mat-raised-button color="primary" (click)="goToRegister()">Register</button>
+  </form>
+</div>
