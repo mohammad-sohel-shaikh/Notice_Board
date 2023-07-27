@@ -7,7 +7,7 @@ require('dotenv').config()
 const register= async (req,res)=>{
     try{
         console.log("register");
-        console.log(req.body.username);
+        console.log(req.body);
         const existUser= await userModel.findOne({email:req.body.email});
         if(existUser){
             return res.send("errror")
@@ -16,7 +16,8 @@ const register= async (req,res)=>{
         const newUser= await userModel.create({
             username: req.body.username,
             email: req.body.email,
-            password: hasPassword
+            password: hasPassword,
+            role:req.body.role
         })
         console.log(newUser);
         // localStorage.setItem("userInfo",newUser)
