@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
@@ -24,7 +25,8 @@ const material: any[] = [
   MatListModule,
   MatSnackBarModule,
   MatSelectModule,
-  MatTableModule
+  MatTableModule,
+  MatPaginatorModule
 ]
 
 @NgModule({

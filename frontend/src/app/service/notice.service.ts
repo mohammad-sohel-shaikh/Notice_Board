@@ -10,13 +10,16 @@ export class NoticeService {
   createNotice(notice:any){
     return this.http.post(`${this.url}/add-notice/`,notice)
   }
-  getNotice(){
+  getNotices(){
     return this.http.get(`${this.url}/notice`)
   }
-  updateNotice(notice:any){
-    return this.http.put(`${this.url}/edit-notice/:id`,notice)
+  getNotice(id:string){
+    return this.http.get(`${this.url}/notice/${id}`)
   }
-  deleteNotice(){
-    return this.http.delete(`${this.url}/notice/:id`)
+  updateNotice(id:string,notice:any){
+    return this.http.put(`${this.url}/edit-notice/${id}`,notice)
+  }
+  deleteNotice(id:string){
+    return this.http.delete(`${this.url}/notice/${id}`)
   }
 }

@@ -13,4 +13,8 @@ export class LocalStorageService {
     return localStorage.getItem('userInfo')
   }
 
+  clearStorage(){
+    return localStorage.clear()
+  }
+
 }

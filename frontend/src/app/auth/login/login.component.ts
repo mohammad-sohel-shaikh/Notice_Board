@@ -28,8 +28,8 @@ export class LoginComponent {
         console.log(value);
         this.localStorage.setItem(JSON.stringify(value))
         
+        this.router.navigate(['notice'])
       })
-      this.router.navigate(['notice-list'])
     }
   }
   goToRegister(){

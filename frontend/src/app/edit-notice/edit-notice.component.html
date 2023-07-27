@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName">Title</label>
+      <input type="text" id="firstName" formControlName="title">
+      <div *ngIf="form.controls['title'].invalid && form.controls['title'].touched" class="error-message">
+        Please enter Title.
+      </div>
+    </div>
+  
+    <div>
+      <label for="lastName">Description</label>
+      <input type="text" id="lastName" formControlName="description">
+      <div *ngIf="form.controls['description'].invalid && form.controls['description'].touched" class="error-message">
+        Please enter desc.
+      </div>
+    </div>
+  
+    <!-- Add more fields as needed with corresponding titles and descriptions -->
+  
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+  

@@ -43,10 +43,10 @@ export class AddNoticeComponent {
       //   console.log(value);
 
       // })
-      this.router.navigate(['notice-list'])
+      this.router.navigate(['notice'])
     }
   }
   goBack(){
-    this.router.navigate(['/notice-list'])
+    this.router.navigate(['/notice'])
   }
 }

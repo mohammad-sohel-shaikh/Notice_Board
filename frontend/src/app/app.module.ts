@@ -9,12 +9,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavComponent } from './nav/nav.component';
+import { EditNoticeComponent } from './edit-notice/edit-notice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddNoticeComponent,
-    NoticeListComponent
+    NoticeListComponent,
+    NavComponent,
+    EditNoticeComponent
   ],
   imports: [
     BrowserModule,
