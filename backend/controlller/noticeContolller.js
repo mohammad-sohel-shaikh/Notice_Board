@@ -7,8 +7,10 @@ const createNotice = async (req, res) => {
   //     calories:req.body.calories
   // })
   // let id=105
+  console.log(req.body)
   const newNotice = await noticeModel(req.body);
   try {
+  
     await newNotice.save();
     res.send(newNotice);
   } catch (error) {
@@ -26,7 +28,7 @@ const getNotices = async (req, res) => {
 };
 
 const getNotice = async (req, res, next) => {
-  const notice = await noticeModel.findById(req.params.id);
+  const notice = await noticeModel.findById(req.params.id).populate("userId")
   try {
     res.send(notice);
   } catch (err) {
@@ -35,8 +37,10 @@ const getNotice = async (req, res, next) => {
 };
 
 const updateNotice = async (req, res) => {
+  console.log(req.params,req.body)
   try {
     await noticeModel.findByIdAndUpdate(req.params.id, req.body);
+    res.status(200)
   } catch (err) {
     res.status(500).send(err);
   }

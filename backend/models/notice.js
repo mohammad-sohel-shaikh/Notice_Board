@@ -4,11 +4,13 @@ const noticeSchema = new mongoose.Schema(
   {
     title: {
       type: String,
+      required:true
     },
     description: {
       type: String,
+      required:true
     },
-    userId:{type:mongoose.Schema.ObjectId,ref:'users'}
+    userId:{type:mongoose.Schema.ObjectId,ref:'User'}
   },
   { timestamps: true }
 );

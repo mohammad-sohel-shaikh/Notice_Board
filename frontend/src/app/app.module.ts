@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { EditNoticeComponent } from './edit-notice/edit-notice.component';
+import { NoticeComponent } from './notice/notice.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditNoticeComponent } from './edit-notice/edit-notice.component';
     AddNoticeComponent,
     NoticeListComponent,
     NavComponent,
-    EditNoticeComponent
+    EditNoticeComponent,
+    NoticeComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 
+
 const material: any[] = [
   MatCardModule,
   MatMenuModule,
@@ -26,7 +27,8 @@ const material: any[] = [
   MatSnackBarModule,
   MatSelectModule,
   MatTableModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+
 ]
 
 @NgModule({

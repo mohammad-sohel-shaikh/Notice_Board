@@ -7,7 +7,7 @@ router.post('/add-notice',noticeContro.createNotice)
 
 router.get('/notice',noticeContro.getNotices)
 
-router.get('/notice/:id',noticeContro.getPost)
+router.get('/notice/:id',noticeContro.getNotice)
 
 
 router.put('/edit-notice/:id',noticeContro.updateNotice)
